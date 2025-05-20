@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
 import { Dialog, DialogPanel } from '@headlessui/react'
@@ -13,14 +13,47 @@ const navigation = [
     { name: 'CONTACT', href: '/contact' },
 ]
 
+
+
 export default function Navbar() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const pathname = usePathname();
 
+    const isHome = pathname === '/';
+
+    const [highlightProduct, setHighlightProduct] = useState(false);
+
+    useEffect(() => {
+        if (!isHome) return;
+
+        const section = document.getElementById('product-services');
+        if (!section) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setHighlightProduct(entry.isIntersecting);
+            },
+            {
+                threshold: 0.3, // Trigger ketika 40% terlihat
+            }
+        );
+
+        observer.observe(section);
+
+        return () => {
+            if (section) observer.unobserve(section);
+        };
+    }, [isHome]);
+
     return (
 
-        <header className="inset-x-0 top-0 z-50 fixed bg-white/70 backdrop-blur-lg shadow">
+        <header className={`inset-x-0 top-0 z-50 fixed shadow transition-colors duration-300 ${isHome
+                ? highlightProduct
+                ? 'opacity-0 pointer-events-none transition-opacity delay-100 ease-out' // Saat berada di section #product-services
+                    : 'border-b border-white/50'
+                : 'bg-white'
+        }`}>
             <nav aria-label="Global" className="flex items-center justify-between p-6">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
@@ -49,7 +82,8 @@ export default function Navbar() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className={`text-lg font-semibold hover:text-blue-600 hover:scale-110 hover:-translate-z-2 transition delay-150 duration-300 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none ${pathname === item.href ? 'text-blue-600' : 'text-gray-900'
+                            className={`md:text-lg font-medium hover:text-blue-600 hover:scale-110 hover:-translate-z-2 transition delay-150 duration-300 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none ${pathname === item.href ? 'text-blue-600 font-bold' : 'text-gray-400'
+                                } ${isHome ? ' text-white hover:text-white' : 'text-black'
                                 }`}
                         >
                             {item.name}
@@ -92,20 +126,21 @@ export default function Navbar() {
                                     <Link
                                         key={item.name}
                                         href={item.href}
+                                        onClick={() => setMobileMenuOpen(false)}
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                                     >
                                         {item.name}
                                     </Link>
                                 ))}
                             </div>
-                            <div className="py-6">
+                            {/* <div className="py-6">
                                 <Link
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                                 >
                                     Log in
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </DialogPanel>

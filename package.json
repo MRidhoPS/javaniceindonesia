@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "axios": "^1.9.0",
     "company_profile": "file:",
+    "framer-motion": "^12.12.1",
     "fs": "^0.0.1-security",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",

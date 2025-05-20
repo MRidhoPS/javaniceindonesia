@@ -1,28 +1,78 @@
+'use client'
 import data from '@/app/data/data';
+import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { SlideRight, SlideUp } from '@/components/utilities';
+import { useParams } from 'next/navigation';
 
-export default function ServiceDetail({ params }) {
-    const { id } = params;
+export default function ServiceDetail() {
+    const params = useParams();
+    const id = params?.id;
+
     const service = data.find((item) => item.id === id);
 
-    if (!service) {
-        return <div>Service not found.</div>;
-    }
+    if (!service) return <div>Service not found</div>;
 
     return (
-        <div className='px-5'>
+        <div className='px-5 min-h-screen'>
             <div className='w-auto h-auto  mt-30 px-5 py-10 space-y-4 shadow-2xl rounded-4xl'>
-                <h1 className="text-4xl font-bold">{service.title}</h1>
-                <div className='relative w-auto h-90 bg-white mt-5 shadow-2xl mb-10'>
-                    <h1 className="absolute text-3xl font-medium inset-x-5 bottom-10">{service.title}</h1>
-                </div>
-                <p>{service.details}</p>
-                <p className='mt-10'>Beberapa aspek penting dari layanan transportasi masyarakat meliputi:</p>
-                <div className='space-y-5'>{service.aspek_penting.map((item, index) => (
-                    <p key={index} >{index + 1} <span className='font-bold'>{item.judul}</span>: {item.isi}</p>
-                ))}</div>
-                
 
+                <motion.h1
+                    variants={SlideRight(0.2)}
+                    viewport={{ amount: 0.5, once: true }}
+                    initial='hidden'
+                    whileInView='visible'
+                    className="text-4xl font-bold"
+                >
+                    {service.title}
+                </motion.h1>
+                <motion.div
+                    variants={SlideUp(0.2)}
+                    viewport={{ amount: 0.5, once: true }}
+                    initial='hidden'
+                    whileInView='visible'
+                    className='relative w-auto h-90 bg-white mt-5 shadow-2xl mb-10'
+                >
+
+                    <Image src={service.image} width={500} height={300} alt='' className='object-cover w-full h-full filter brightness-65 rounded-2xl'></Image>
+                    <h1 className="absolute text-3xl font-medium inset-x-5 bottom-10 text-white">{service.title}</h1>
+
+                </motion.div>
+
+                <motion.p
+                    variants={SlideRight(0.3)}
+                    viewport={{ amount: 0.5, once: true }}
+                    initial='hidden'
+                    whileInView='visible'
+                >
+                    {service.details}
+                </motion.p>
+                <motion.p
+                    variants={SlideRight(0.3)}
+                    viewport={{ amount: 0.5, once: true }}
+                    initial='hidden'
+                    whileInView='visible'
+                    className='mt-10'
+                >
+                    Beberapa aspek penting dari layanan transportasi masyarakat meliputi:
+                </motion.p>
+
+                <div className='space-y-5'>
+                    {service.aspek_penting.map((item, index)=>(
+                        <motion.p
+                            variants={SlideRight(0.3)}
+                            viewport={{ amount: 0.5, once: true }}
+                            initial='hidden'
+                            whileInView='visible'
+                            className='mt-10'
+                            key={index}
+                        >
+                            {index + 1} <span className='font-bold'>{item.judul}</span>: {item.isi}
+                        </motion.p>
+                    ))}
+
+                </div>
 
             </div>
             <div className="flex flex-row justify-between my-10">
