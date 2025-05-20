@@ -30,7 +30,7 @@ export default function ContactPage() {
         <div className="py-10 px-6 md:px-10 lg:px-20 basis-1/2 ">
           <h1 className="mb-6 text-3xl md:text-4xl font-bold text-blue-900">Hubungi Kami</h1>
           {data.map((item, index) => (
-            <div className="mb-2 flex flex-row items-center gap-3">
+            <div className="mb-2 flex flex-row items-center gap-3" key={index}>
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-blue-900 shrink-0">
                 <p className="text-lg text-blue-900">{item.icon}</p>
               </div>
