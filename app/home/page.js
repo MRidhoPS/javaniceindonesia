@@ -171,7 +171,7 @@ export default function HomePage() {
 
     return (
         <section id="home" className="overflow-x-hidden">
-            <div className="bg-white w-full overflow-hidden">
+            <div className="bg-transparent w-full overflow-hidden">
                 {/* Hero Section */}
                 <div className="w-full h-[600px] bg-blue-200 relative overflow-hidden mb-10 max-w-screen">
                     <Image

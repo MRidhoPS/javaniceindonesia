@@ -90,7 +90,7 @@ var data = [
         'id': 'Pengadaan-Pemeliharaan-Cubicle-TM',
         'title': 'Pengadaan dan Pemeliharaan Cubicle TM',
         'description': 'Layanan kami mencakup pengadaan, pemasangan, dan perawatan cubicle TM (20 kV atau sesuai kebutuhan), termasuk inspeksi rutin, pengujian relay proteksi, dan pembersihan komponen.',
-        'background': '/panel_kubikel_2.jpg',
+        'background': '/Panel_kubikel_2.jpg',
         'bridging': 'Mengapa Penting:',
         'opportunities': 'Cubicle TM adalah titik kontrol vital dalam distribusi tegangan menengah. Tanpa perawatan, bisa terjadi kegagalan sistem, trip breaker, atau bahkan bahaya kebakaran.',
         'next_page': 'Pengadaan-dan-Instalasi-Panel-Listrik',
