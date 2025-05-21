@@ -35,7 +35,7 @@ export default function Navbar() {
                 setHighlightProduct(entry.isIntersecting);
             },
             {
-                threshold: 0.3, // Trigger ketika 40% terlihat
+                threshold: 0.4, // Trigger ketika 40% terlihat
             }
         );
 
@@ -62,7 +62,8 @@ export default function Navbar() {
                             width={500}
                             height={500}
                             alt=""
-                            src="/logo.png"
+                            // src="/icon.png"
+                            src={`${isHome ? '/logo_white.png' : '/logo_black.png'}`}
                             className="h-8 w-auto"
                         />
                     </Link>
@@ -71,7 +72,7 @@ export default function Navbar() {
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-900"
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon aria-hidden="true" className="size-6" />
@@ -106,7 +107,7 @@ export default function Navbar() {
                                 width={500}
                                 height={500}
                                 alt=""
-                                src="/logo.png"
+                                src="/icon.png"
                                 className="h-8 w-auto"
                             />
                         </Link>
@@ -133,14 +134,6 @@ export default function Navbar() {
                                     </Link>
                                 ))}
                             </div>
-                            {/* <div className="py-6">
-                                <Link
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >
-                                    Log in
-                                </Link>
-                            </div> */}
                         </div>
                     </div>
                 </DialogPanel>

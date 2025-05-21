@@ -7,7 +7,7 @@ var data = [
     'icon': '📍'
   },
   {
-    'title': 'No. Alamat',
+    'title': 'No. Telephone',
     'description': '+62 8128 008 0275',
     'icon': '📱'
   },
@@ -37,7 +37,7 @@ export default function ContactPage() {
 
               <div>
                 <h1 className="text-2xl font-bold text-blue-900 mb-1 ">{item.title}</h1>
-                <p className="font-extralight text-pretty text-sm">{item.description}</p>
+                <p className="font-extralight text-pretty text-sm text-black">{item.description}</p>
               </div>
             </div>
           ))}
@@ -89,7 +89,7 @@ export default function ContactPage() {
         <iframe
           title="maps"
           className="w-full h-full"
-          src="https://maps.google.com/maps?q=Jakarta&z=13&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.851057043237!2d107.02035102929717!3d-6.235661677583245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698fdb842b938f%3A0xf37617d8d2f6ea6f!2sPT.+JAVANICE+INDONESIA+PERKASA!5e0!3m2!1sid!2sid!4v1536595582593"
         ></iframe>
       </div>
     </div>

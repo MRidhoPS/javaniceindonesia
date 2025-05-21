@@ -39,7 +39,7 @@ export default function HomePage() {
         }
     };
     return (
-        <section id='home' className='min-h-screen'>
+        <section id='home'>
             <div className='bg-white'>
                 <div className="w-auto h-[600px] bg-blue-200 relative overflow-hidden mb-10">
                     {/* Background image */}
@@ -78,45 +78,33 @@ export default function HomePage() {
                         </div>
                     </motion.div>
                 </div>
-                <section id='product-services'>
-                    <div className='grid md:grid-cols-3 px-5 mb-10 items-center justify-center lg:px-25'>
+                <section id='product-services' className='bg-white'>
+                    <div className='flex flex-col gap-3 md:gap-1 md:grid md:grid-cols-4 px-5 pb-10 items-center justify-center lg:px-10 bg-white'>
                         {data.map((item, index) => (
                             <Link href={`/product/${item.id}`} key={item.id}>
                                 <motion.div
                                     variants={SlideRight(0.2)}
-
-                                    viewport={{once: true }}
-                                    initial='hidden'
-                                    whileInView='visible'
-                                    className="relative my-1 mx-1 shadow-2xl overflow-hidden group"
+                                    viewport={{ once: true }}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    className="relative my-1 mx-1 bg-transparent overflow-hidden group"
                                 >
                                     <Image
-                                        src={item.image}
+                                        src={item.background}
                                         width={500}
-                                        height={300}
+                                        height={500}
                                         alt=""
-                                        className="object-cover w-full h-auto"
+                                        className="object-cover md:w-140 h-40 rounded-xl"
                                     />
 
-                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300 ease-in-out z-10"></div>
+                                    <div className="absolute inset-0 bg-black/40 rounded-2xl group-hover:bg-black/10 transition duration-300 ease-in-out z-10" />
 
-                                    <h1 className="absolute inset-y-2 inset-x-4 text-white z-20">{item.title}</h1>
+                                    <h1 className="absolute bottom-4 left-6 right-4 text-white z-20 text-[12px] overflow-hidden text-ellipsis whitespace-nowrap">
+                                        {item.title}
+                                    </h1>
                                 </motion.div>
-                                {/* <div className="relative my-1 mx-1 shadow-2xl overflow-hidden group">
-
-                                    <Image
-                                        src={item.image}
-                                        width={500}
-                                        height={300}
-                                        alt=""
-                                        className="object-cover w-full h-auto"
-                                    />
-
-                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300 ease-in-out z-10"></div>
-
-                                    <h1 className="absolute inset-y-2 inset-x-4 text-white z-20">{item.title}</h1>
-                                </div> */}
                             </Link>
+
 
                         ))}
                     </div>
@@ -125,5 +113,7 @@ export default function HomePage() {
 
             </div>
         </section>
+
+       
     )
 }
