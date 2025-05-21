@@ -108,7 +108,7 @@ var data = [
         ],
         'image': [
             '/panel_kubikel_1.jpg',
-            '/panel_kubikel_2.jpg',
+            '/Panel_kubikel_2.jpg',
         ]
     },
 
