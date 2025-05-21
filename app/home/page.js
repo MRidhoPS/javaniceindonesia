@@ -94,7 +94,7 @@ export default function HomePage() {
                                         width={500}
                                         height={500}
                                         alt=""
-                                        className="object-cover md:w-140 h-40 rounded-xl"
+                                        className="object-cover w-100 h-40 rounded-xl max-w-full"
                                     />
 
                                     <div className="absolute inset-0 bg-black/40 rounded-2xl group-hover:bg-black/10 transition duration-300 ease-in-out z-10" />
