@@ -32,7 +32,7 @@ export default function BottomInfo() {
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Kontak Kami</h2>
                     <p className="text-gray-300">Phone : +021 - 8810373, <br/> 021 - 8813458</p>
-                    <p className="text-gray-300">Email : contact@gunbuster.co.id</p>
+                    <p className="text-gray-300">Email : javaniceindonesia@gmail.com</p>
                 </div>
             </div>
 
