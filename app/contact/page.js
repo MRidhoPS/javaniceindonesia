@@ -8,7 +8,7 @@ var data = [
   },
   {
     'title': 'No. Telephone',
-    'description': '+62 8128 008 0275',
+    'description': '(021) - 8813458',
     'icon': '📱'
   },
   {

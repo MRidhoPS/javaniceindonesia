@@ -11,7 +11,7 @@ const navigation = [
 export default function BottomInfo() {
     return (
         <div>
-            <div className="flex flex-col md:flex-row justify-center items-center text-center py-30 px-7 md:px-40 gap-12 bg-blue-950">
+            <div className="flex flex-col lg:flex-row justify-center items-center text-center py-30 px-7 md:px-40 gap-12 bg-blue-950">
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Lokasi</h2>
                     <p className="text-gray-300">
@@ -23,7 +23,7 @@ export default function BottomInfo() {
 
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Jam Operasional</h2>
-                    <p className="text-gray-300">10.00 – 22.00</p>
+                    <p className="text-gray-300">09.00 – 22.00</p>
                     <p className="text-gray-300">Senin – Minggu</p>
                 </div>
 
@@ -31,8 +31,17 @@ export default function BottomInfo() {
 
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Kontak Kami</h2>
-                    <p className="text-gray-300">Phone : +021 - 8810373, <br/> 021 - 8813458</p>
-                    <p className="text-gray-300">Email : javaniceindonesia@gmail.com</p>
+                    <a 
+                        href="tel:+62218813458" 
+                    className="text-gray-300">Phone : (021) - 8813458</a>
+                    <br/>
+                    <a 
+                        href="tel:+62218810373" 
+                    className="text-gray-300">(021) - 8810373</a>
+                    <br />
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=javaniceindonesia@gmail.com"
+                        className="text-gray-300">Email : javaniceindonesia@gmail.com</a>
                 </div>
             </div>
 

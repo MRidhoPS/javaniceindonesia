@@ -126,7 +126,7 @@ import data from '../data/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { SlideRight } from '@/components/utilities';
+import { SlideRight, SlideUp } from '@/components/utilities';
 
 export default function HomePage() {
     const [downloadStatus, setDownloadStatus] = useState('');
@@ -209,9 +209,33 @@ export default function HomePage() {
                     </motion.div>
                 </div>
 
+                <div className='mb-10 py-40 px-5 gap-2 flex space-y-1.5 flex-col items-center text-center lg:flex lg:flex-row lg:space-x-6 lg:text-left shadow-2xl 
+                bg-white rounded-b-4xl'>
+                                    <motion.h1
+                                        variants={SlideUp(0.2)}
+                                        viewport={{ amount: 0.5, once: true }}
+                
+                                        initial='hidden'
+                                        whileInView='visible'
+                                        className="text-2xl font-bold md:text-7xl lg:text-9xl text-blue-950">
+                                        Tentang Kami
+                                    </motion.h1>
+                                    <motion.p
+                                        variants={SlideRight(0.2)}
+                                        viewport={{ once: true }}
+                                        initial='hidden'
+                                        whileInView='visible'
+                                        className="text-balance text-[14px] md:text-[16px] lg:text-[20px] text-justify mt-3 text-black">
+                                        Kami merupakan perusahaan swasta yang berpengalaman menangani proyek skala kecil hingga besar di bidang Electric, Mechanical, dan General Supplier, didukung Peralatan yang canggih, Tenaga ahli profesional, dan Tim Engineering berorientasi pelanggan. Kami berkomitmen pada kemampuan, anggaran, jadwal dan pelayanan untuk pengembangan berkelanjutan dan berkomitmen untuk memberikan solusi terbaik dalam Pemeliharaan Transformator, Pemeliharaan dan Pemasangan Panel listrik, dan Pemeliharaan Genset.
+                                        Dengan slogan “Trust and Solution is Our Services,” kami menjunjung kepercayaan konsumen, menyediakan layanan 24 jam, dan siap menjadi mitra utama di bidang Electrical, Mechanical, dan General Supplier.
+                                    </motion.p>
+                                </div>
+
                 {/* Product Services Section */}
                 <section id="product-services" className="bg-white overflow-hidden">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-5 pb-10 items-center justify-center lg:px-10">
+                    <h1 className='text-blue-950 font-bold text-center mt-10 text-[26px] md:text-3xl lg:text-6xl'>Product & Services</h1>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2  mt-10 md:grid-cols-4 gap-4 px-5 pb-10 items-center justify-center lg:px-10">
                         {data.map((item) => (
                             <Link href={`/product/${item.id}`} key={item.id}>
                                 <motion.div
@@ -237,6 +261,14 @@ export default function HomePage() {
                         ))}
                     </div>
                 </section>
+
+                <div className="w-full h-80">
+                    <iframe
+                        title="maps"
+                        className="w-full h-full"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.851057043237!2d107.02035102929717!3d-6.235661677583245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698fdb842b938f%3A0xf37617d8d2f6ea6f!2sPT.+JAVANICE+INDONESIA+PERKASA!5e0!3m2!1sid!2sid!4v1536595582593"
+                    ></iframe>
+                </div>
             </div>
         </section>
     );
