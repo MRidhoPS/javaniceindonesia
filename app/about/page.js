@@ -107,7 +107,7 @@ export default function AboutPage() {
                         </div>
                         <div className="absolute md:bottom-80 lg:bottom-60 right-0 w-4/5 rounded-xl overflow-hidden shadow-lg hidden lg:block">
                             <Image
-                                src="/trafo 1.jpg"
+                                src="/Trafo 1.jpg"
                                 alt="Nickel Production"
                                 className="w-full object-cover"
                                 width={500}
