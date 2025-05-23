@@ -15,7 +15,7 @@ export default function BottomInfo() {
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Lokasi</h2>
                     <p className="text-gray-300">
-                        Jl. H. Risan No.06 Rt. 02/Rw. 07 Duren Jaya Bekasi Timur Bekasi 17111
+                        Jl. H. Risan No.06 Rt. 02/Rw. 07 Duren Jaya Timur Bekasi 17111
                     </p>
                 </div>
 

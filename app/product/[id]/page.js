@@ -69,6 +69,16 @@ export default function ServiceDetail() {
                     {service.opportunities}
                 </motion.p>
 
+                <motion.p
+                    variants={SlideRight(0.3)}
+                    viewport={{ amount: 0.5, once: true }}
+                    initial='hidden'
+                    whileInView='visible'
+                    className='mt-10 text-[18px] md:text-lg lg:text-2xl italic font-bold text-blue-950'
+                >
+                    Tujuan
+                </motion.p>
+
                 <div className='space-y-5'>
                     {service.aspek_penting.map((item, index) => (
                         <motion.p
