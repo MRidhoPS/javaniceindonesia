@@ -31,17 +31,20 @@ export default function BottomInfo() {
 
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold mb-4 text-white">Kontak Kami</h2>
-                    <a 
-                        href="tel:+62218813458" 
-                    className="text-gray-300">Phone : (021) - 8813458</a>
-                    <br/>
-                    <a 
-                        href="tel:+62218810373" 
-                    className="text-gray-300">(021) - 8810373</a>
+                    <a
+                        href="tel:+62218813458"
+                        className="text-gray-300">Phone : (021) - 8813458</a>
+                    <br />
+                    <a
+                        href="tel:+62218810373"
+                        className="text-gray-300">(021) - 8810373</a>
                     <br />
                     <a
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=javaniceindonesia@gmail.com"
-                        className="text-gray-300">Email : javaniceindonesia@gmail.com</a>
+                        className="text-gray-300">Email : marketing@javanice-electric.com</a>
+                    <a
+                        href="whatsapp://send?text=Hello&phone=+6285353226321"
+                        className="text-gray-300"><br/>WhatsApp : +6285353226321</a>
                 </div>
             </div>
 

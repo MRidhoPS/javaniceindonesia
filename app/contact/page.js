@@ -9,11 +9,16 @@ var data = [
   {
     'title': 'No. Telephone',
     'description': '(021) - 8813458',
+    'icon': '📞'
+  },
+  {
+    'title': 'WhatsApp',
+    'description': '+6285353226321',
     'icon': '📱'
   },
   {
     'title': 'Email',
-    'description': 'javaniceindonesia@gmail.com',
+    'description': 'marketing@javanice-electric.com',
     'icon': '📧'
   },
 ]

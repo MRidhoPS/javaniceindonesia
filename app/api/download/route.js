@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export async function GET(request) {
-    const filePath = path.join(process.cwd(), 'public', 'cp-javaniceperkasa.pdf');
+    const filePath = path.join(process.cwd(), 'public', 'Comprof Javanice Indonesia Perkasa.pdf');
     const fileName = 'company profile.pdf';
 
     if (!fs.existsSync(filePath)) {
