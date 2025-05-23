@@ -40,7 +40,7 @@ export default function BottomInfo() {
                         className="text-gray-300">(021) - 8810373</a>
                     <br />
                     <a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=javaniceindonesia@gmail.com"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=marketing@javanice-electric.com"
                         className="text-gray-300">Email : marketing@javanice-electric.com</a>
                     <a
                         href="whatsapp://send?text=Hello&phone=+6285353226321"
