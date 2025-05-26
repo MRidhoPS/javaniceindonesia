@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PT. JAVANICE INDONESIA PERKASA | Official Website",
+  title: "PT. JAVANICE INDONESIA PERKASA | Official Website 2025",
   description:
     "treatment oil trafo,PT.JAVANICE INDONESIA PERKASA,javanice, perkasa, java nice,javaniceindonesia,java nice indonesia,Purifikasi oli trafo,mechanical contractor,supplier listrik,investigasi infrared,service generator,service panel listrik,generator service,perbaikan generator,maintenance generator, oli trafo,perawatan cubicle.",
   keywords:
