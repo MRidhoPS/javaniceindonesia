@@ -22,14 +22,19 @@ export const metadata = {
   authors: [{ name: "PT. Javanice Indonesia Perkasa" }],
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     title: "PT. JAVANICE INDONESIA PERKASA | Official Website",
     description:
       "Spesialis dalam treatment oil trafo, jasa listrik, dan mechanical contractor di Indonesia.",
-    url: "https://javaniceindonesia.com", // Ganti dengan domain aslimu
+    url: "https://www.javanice-electric.com",
     siteName: "Javanice Indonesia",
     locale: "id_ID",
     type: "website",
+
   },
 };
 
