@@ -25,6 +25,7 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   openGraph: {
     title: "PT. JAVANICE INDONESIA PERKASA | Official Website",
