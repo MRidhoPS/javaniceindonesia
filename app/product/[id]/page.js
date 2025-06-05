@@ -23,7 +23,7 @@ export default function ServiceDetail() {
                 <meta property="og:title" content={`${service.title} | JavaNiceIndonesia`} />
                 <meta property="og:description" content={service.description.slice(0, 150)} />
                 <meta property="og:image" content={service.background} />
-                <meta property="og:url" content={`https://www.javanice-electric.com/product/${servise.title}`} /> 
+                <meta property="og:url" content={`https://www.javanice-electric.com/product/${service.title}`} /> 
             </Head>
             <div className='px-5 min-h-screen'>
                 <div className='w-auto h-auto  mt-30 px-5 py-10 space-y-4 shadow-2xl rounded-4xl'>
